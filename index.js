@@ -26,12 +26,14 @@ module.exports = function(elements, options) {
       svg.setAttribute(elements[i].attributes[j].name, elements[i].attributes[j].value);
     }
 
+    /*
     var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     rect.setAttribute('width', '100%');
     rect.setAttribute('height', '100%');
     rect.setAttribute('fill', 'tomato');
-
     svg.appendChild(rect);
+    */
+
     svg.appendChild(text);
     elements[i].parentNode.replaceChild(svg, elements[i]);
 
