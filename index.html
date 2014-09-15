@@ -1,50 +1,29 @@
 <style>
   body {
     font-family: 'Avenir Next', sans-serif;
-    font-weight: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2em;
   }
   h1 { font-size: 3rem; font-weight: bold }
-  /*
-  svg { max-height: 100%; width: 100%; margin-bottom: .5rem; }
-  svg text { font-size: 1rem; font-weight: bold }
-  */
+  .mb1 { margin-bottom: 1rem }
 </style>
 
-<h1 data-fittertext>Fitter Happier Text</h1>
-<h1 data-fittertext>1,024</h1>
-
-<!--
-<svg viewBox="0 0 128 64">
-  <rect width="1024" height="128" fill="tomato"/>
-  <text y="16">MMMMM</text>
-</svg>
-<svg viewBox="0 0 128 64">
-  <rect width="1024" height="128" fill="tomato"/>
-  <text y="16">A long title here</text>
-</svg>
-<svg viewBox="0 0 128 64">
-  <rect width="1024" height="128" fill="tomato"/>
-  <text y="16">1,024</text>
-</svg>
--->
+<h1 data-fittertext class="mb1">Fitter Happier Text</h1>
+<h1 data-fittertext class="mb1">1,024</h1>
+<h1 data-fittertext class="mb1">
+  more productive
+</h1>
+<h1 data-fittertext class="mb1">comfortable</h1>
+<h1 data-fittertext class="mb1">not drinking too much</h1>
+<h1 data-fittertext class="mb1">regular exercise at the gym (3 days a week)</h1>
+<h1 data-fittertext class="mb1">getting on better with your associate employee contemporaries</h1>
+<h1 data-fittertext class="mb1">at ease</h1>
 
 
 <script src="dist/fitter-happier-text.js"></script>
 <script>
-
   var nodes = document.querySelectorAll('[data-fittertext]');
-  console.log(nodes.length);
-
-  fitterHappierText(nodes);
-
-
-  //for (var i = 0; i < svg.length; i++) {
-  //  var text = svg[i].querySelectorAll('text');
-  //  var width = text[0].offsetWidth;
-  //  var height = text[0].offsetHeight;
-  //  console.log(width, height);
-  //  svg[i].setAttribute('viewBox', '0 0 ' + width + ' ' + (height + 4));
-  //}
-
+  fitterHappierText(nodes, { baseline: 16 });
 </script>
 
