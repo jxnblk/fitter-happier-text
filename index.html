@@ -118,7 +118,6 @@
   </section>
 
   <section class="py2">
-    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400" rel="stylesheet">
     <h1>Usage</h1>
     <p>
       <a href="https://github.com/jxnblk/fitter-happier-text/archive/0.0.1.zip">Download source</a>
@@ -164,6 +163,21 @@ fitterHappierText(nodes);
     var nodes = document.querySelectorAll('[data-fitter-happier-text]');
     fitterHappierText(nodes, { baseline: 16 });
   </script>
+  <script type="text/javascript">
+    WebFontConfig = { google: { families: [ 'Source+Code+Pro::latin' ] } };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+    <!--
+    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400" rel="stylesheet">
+    -->
 
 </body>
 </html>
