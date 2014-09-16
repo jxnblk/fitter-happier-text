@@ -4,12 +4,13 @@ module.exports = function(elements, options) {
   var options = options || {};
   var baseline = options.baseline || 16;
   var paddingY = options.paddingY || 0;
+  var doc = options.doc || document;
 
   for (var i = 0; i < elements.length; i++) {
 
     var content = elements[i].textContent;
-    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    var svg = doc.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    var text = doc.createElementNS('http://www.w3.org/2000/svg', 'text');
     var width;
     var height;
 

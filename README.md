@@ -29,11 +29,14 @@ To adjust for different fonts, use the `baseline` and `paddingY` options.
 fitterHappierText(nodes, { baseline: 14, paddingY: 2 });
 ```
 
+<!--
 ## Usage with Gulpjs
 
 To avoid client-side rendering, use a build tool like Gulpjs to replace HTML elements with SVG.
 
 _Example TK_
+
+-->
 
 ---
 

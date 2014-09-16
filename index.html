@@ -42,6 +42,15 @@
     .py2 { padding-top: 2rem; padding-bottom: 2rem; }
     .xs-show { display: none }
     @media (max-width: 40em) { .xs-show { display: block } }
+    @-webkit-keyframes stretchy { from { width: 100% } to { width:  50% } }
+    @keyframes stretchy { from { width: 100% } to { width: 50% } }
+    .stretchy {
+      min-height: 128px;
+      margin: 0 auto;
+      -webkit-animation: stretchy 1s alternate ease infinite;
+      animation: stretchy 1s alternate ease infinite;
+      /* Yeah, no. */
+    }
   </style>
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400" rel="stylesheet">
 </head>
@@ -128,7 +137,9 @@ fitterHappierText(nodes);
     <p><small>
       Since this is based on the SVG text element, no JavaScript resize events are fired –
       JavaScript is only used on initial load.
+      <!--
       For a Gulpjs-based preprocessed example, see the README on Github.
+      -->
     </small></p>
     <h1><a href="http://github.com/jxnblk/fitter-happier-text">View on Github</a></h1>
   </section>

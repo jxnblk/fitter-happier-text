@@ -17,6 +17,8 @@
     "gulp": "^3.8.8",
     "gulp-browserify": "^0.5.0",
     "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^1.0.1"
+    "gulp-uglify": "^1.0.1",
+    "gulp-cheerio": "^0.3.2",
+    "gulp-dom": "^0.1.0"
   }
 }
