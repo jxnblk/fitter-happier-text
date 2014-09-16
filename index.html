@@ -21,7 +21,12 @@
     }
     h1 { font-size: 3rem; font-weight: 600 }
     p { font-size: 1.25rem }
-    a { color: rgba(0,0,0,.6); transition: color .1s ease-out; }
+    a {
+      color: rgba(0,0,0,.6);
+      transition: color .1s ease-out;
+      text-decoration: none;
+      border-bottom: 2px solid;
+    }
     a:hover { color: white }
     pre {
       font-family: 'Source Code Pro', monospace;
@@ -120,6 +125,11 @@ npm install fitter-happier-text
 var nodes = document.querySelectorAll('[data-fittertext]');
 fitterHappierText(nodes);
 </pre>
+    <p><small>
+      Since this is based on the SVG text element, no JavaScript resize events are fired –
+      JavaScript is only used on initial load.
+      For a Gulpjs-based preprocessed example, see the README on Github.
+    </small></p>
     <h1><a href="http://github.com/jxnblk/fitter-happier-text">View on Github</a></h1>
   </section>
 
