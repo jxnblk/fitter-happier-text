@@ -23,15 +23,22 @@
       color: rgba(0,0,0,.6);
       transition: color .1s ease-out;
       text-decoration: none;
-      border-bottom: 2px solid;
+      background-image: linear-gradient(transparent 50%, rgba(0,0,0,.6) 50%);
+      background-size: 4px 4px;
+      background-position: 0 1.125em;
+      background-repeat: repeat-x;
     }
-    a:hover { color: white }
+    a:hover {
+      color: white; 
+      background-image: linear-gradient(transparent 50%, white 50%);
+    }
     pre {
       font-family: 'Source Code Pro', Consolas, Monaco, monospace;
       text-transform: none;
       letter-spacing: 0;
       padding-top: .25em;
       padding-bottom: .25em;
+      padding: .25em .75em;
       overflow-x: scroll;
       background-color: rgba(0,0,0,.2);
     }
@@ -133,15 +140,15 @@ fitterHappierText(nodes);
   <footer class="py2">
     <p>
       Inspired by
-      <a href="http://fittextjs.com/">FitText</a>.
+      <a href="http://fittextjs.com/">FitText</a>
       <br class="xs-show">
       <br class="xs-show">
       Lyrics by
-      <a href="https://www.youtube.com/watch?v=laoq1eeIUxQ">Radiohead</a>.
+      <a href="https://www.youtube.com/watch?v=laoq1eeIUxQ">Radiohead</a>
       <br class="xs-show">
       <br class="xs-show">
       Made with love by
-      <a href="http://jxnblk.com">Jxnblk</a>.
+      <a href="http://jxnblk.com">Jxnblk</a>
     </p>
   </footer>
 
