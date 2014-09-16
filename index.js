@@ -20,12 +20,13 @@ module.exports = function(elements, options) {
     text.setAttribute('font-size', '1rem');
     text.setAttribute('font-weight', 'inherit');
 
-    svg.setAttribute('width', '100%');
-    svg.setAttribute('max-height', '100%');
-
     for (var j = 0; j < elements[i].attributes.length; j++) {
       svg.setAttribute(elements[i].attributes[j].name, elements[i].attributes[j].value);
     }
+
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('style', 'max-height:100%');
+    svg.setAttribute('fill', 'currentcolor');
 
     svg.appendChild(text);
     elements[i].parentNode.replaceChild(svg, elements[i]);
@@ -34,7 +35,6 @@ module.exports = function(elements, options) {
     height = text.offsetHeight;
 
     svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY));
-    svg.setAttribute('fill', 'currentcolor');
 
   }
 
