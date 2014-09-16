@@ -1,8 +1,16 @@
 {
   "name": "fitter-happier-text",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fit text to the width of its container",
   "main": "index.js",
+  "homepage": "http://jxnblk.github.com/fitter-happier-text",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxnblk/fitter-happier-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jxnblk/fitter-happier-text/issues"
+  },
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
