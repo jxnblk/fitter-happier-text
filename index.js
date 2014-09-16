@@ -31,8 +31,8 @@ module.exports = function(elements, options) {
     svg.appendChild(text);
     elements[i].parentNode.replaceChild(svg, elements[i]);
 
-    width = text.offsetWidth;
-    height = text.offsetHeight;
+    width = text.offsetWidth || text.getComputedTextLength();
+    height = text.offsetHeight || 24;
 
     svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY));
 
