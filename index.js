@@ -32,6 +32,8 @@ module.exports = function(elements, options) {
     elements[i].parentNode.replaceChild(svg, elements[i]);
 
     width = text.offsetWidth || text.getComputedTextLength();
+    width = Math.ceil(width);
+    console.log(width);
     height = text.offsetHeight || 24;
 
     svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY));
