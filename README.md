@@ -23,7 +23,7 @@ fitterHappierText(nodes);
 
 Fitter Happier Text replaces each node with an SVG text node and sets the `viewBox` attribute based on its width and height.
 
-To adjust for different fonts, use the `baseline` and `paddingY` options.
+To adjust for different fonts, use the `baseline` and `paddingY` options. `paddingY` can be set to a negative value to reduce the height of the SVG container.
 
 ```js
 fitterHappierText(nodes, { baseline: 14, paddingY: 2 });
@@ -37,6 +37,14 @@ To avoid client-side rendering, use a build tool like Gulpjs to replace HTML ele
 _Example TK_
 
 -->
+
+---
+
+### Browser support:
+
+http://caniuse.com/#feat=svg
+
+Please note: I do not plan on adding any SVG polyfills to handle old browsers.
 
 ---
 
