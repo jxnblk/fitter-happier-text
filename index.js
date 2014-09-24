@@ -20,10 +20,12 @@ module.exports = function(elements, options) {
 
     // assign proper styles and positioning to text elements
     text.textContent = content;
+    text.setAttribute('x', '50%');
     text.setAttribute('y', baseline);
     text.setAttribute('font-family', 'inherit');
     text.setAttribute('font-size', '1rem');
     text.setAttribute('font-weight', 'inherit');
+    text.setAttribute('style', 'text-anchor:middle');
 
     for (var j = 0; j < elements[i].attributes.length; j++) {
       svg.setAttribute(elements[i].attributes[j].name, elements[i].attributes[j].value);
