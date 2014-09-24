@@ -31,8 +31,9 @@ module.exports = function(elements, options) {
 
     // set proper size, style, and fill for svg element
     svg.setAttribute('width', '100%');
-    svg.setAttribute('style', 'max-height:100%;overflow-x:visible');
+    svg.setAttribute('style', 'max-height:100%');
     svg.setAttribute('fill', 'currentcolor');
+    svg.setAttribute('overflow', 'visible');
 
     // append text element to page
     svg.appendChild(text);
