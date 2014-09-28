@@ -7,6 +7,7 @@ module.exports = function(elements, options) {
   var options = options || {};
   var baseline = options.baseline || 16;
   var paddingY = options.paddingY || 0;
+  var paddingX = options.paddingX || 0;
   var doc = options.doc || document;
 
   for (var i = 0; i < elements.length; i++) {
@@ -44,7 +45,7 @@ module.exports = function(elements, options) {
     width = text.offsetWidth || text.getComputedTextLength();
     height = text.offsetHeight || 24;
 
-    svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY));
+    svg.setAttribute('viewBox', '0 0 ' + (width + (paddingX * 2)) + ' ' + (height + paddingY));
 
   }
 
