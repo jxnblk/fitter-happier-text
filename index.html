@@ -11,12 +11,16 @@
       text-transform: uppercase;
       letter-spacing: .2em;
       line-height: 1.5;
-      padding: 1em;
+      padding: 1em 1.5em;
       margin: 0 auto;
-      max-width: 76rem;
       color: rgba(255,255,255,.8);
       background-color: #f40;
       background-image: linear-gradient(#f40, #f37);
+    }
+    @media (min-width: 40em) {
+      body {
+        padding: 1em 3em;
+      }
     }
     h1 { font-size: 3rem; font-weight: 600 }
     a {
@@ -42,9 +46,49 @@
       overflow-x: scroll;
       background-color: rgba(0,0,0,.2);
     }
+    .right-align { text-align: right }
     .py2 { padding-top: 2rem; padding-bottom: 2rem; }
     .xs-show { display: none }
     @media (max-width: 40em) { .xs-show { display: block } }
+
+    #carbonads {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.25;
+      text-align: left;
+      max-width: 320px;
+      text-transform: none;
+    }
+    #carbonads a,
+    #carbonads a:hover {
+      text-decoration: none;
+      color: inherit;
+      background: none;
+    }
+    #carbonads span { display: block }
+    #carbonads > span::before,
+    #carbonads > span::after {
+      content: '';
+      display: table;
+    }
+    #carbonads > span::after {
+      clear: both;
+    }
+    .carbon-img {
+      float: left;
+      margin-right: .5em;
+    }
+    .carbon-img > img { display: block }
+    .carbon-text { overflow: hidden }
+    .carbon-poweredby {
+      float: left;
+      margin-top: .25em;
+      opacity: 0.5;
+    }
+    @media (min-width: 32em) {
+      .table { display: table; table-layout: fixed; width: 100%; }
+      .table-cell { display: table-cell; vertical-align: middle }
+    }
   </style>
 </head>
 <body>
@@ -57,6 +101,18 @@
       <a href="http://github.com/jxnblk/fitter-happier-text">View on Github</a>
     </p>
   </header>
+
+  <div class="table">
+    <div class="table-cell py2">
+      <iframe src="https://ghbtns.com/github-btn.html?user=jxnblk&repo=fitter-happier-text&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="jxnblk" data-size="large">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+    <div class="table-cell right-align">
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=jxnblkcom" id="_carbonads_js"></script>
+    </div>
+  </div>
+
 
   <section class="py2">
     <div data-fitter-happier-text class="">Fitter, happier, more productive</div>
@@ -141,14 +197,15 @@ fitterHappierText(nodes);
     <p>
       Inspired by
       <a href="http://fittextjs.com/">FitText</a>
+      &nbsp;
       <br class="xs-show">
       <br class="xs-show">
       Lyrics by
       <a href="https://www.youtube.com/watch?v=laoq1eeIUxQ">Radiohead</a>
+      &nbsp;
       <br class="xs-show">
       <br class="xs-show">
-      Made with love by
-      <a href="http://jxnblk.com">Jxnblk</a>
+      <a href="http://jxnblk.com">Made by Jxnblk</a>
     </p>
   </footer>
 
