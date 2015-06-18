@@ -14,14 +14,33 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "scripts": {
+    "babel": "babel src --out-dir .",
+    "babel-watch": "babel src --out-dir . -w",
+    "webpack": "webpack --progress --colors",
+    "webpack-dev": "webpack-dev-server --progress --colors",
+    "dev": "npm run webpack-dev & npm run babel-watch",
     "start": "gulp compile"
   },
   "devDependencies": {
+    "babel": "^5.5.8",
+    "babel-core": "^5.5.8",
+    "babel-loader": "^5.1.4",
+    "css-loader": "^0.15.1",
+    "cssnext-loader": "^1.0.1",
+    "gravitons": "^1.0.0",
     "gulp": "^3.8.8",
     "gulp-browserify": "^0.5.0",
+    "gulp-cheerio": "^0.3.2",
+    "gulp-dom": "^0.1.0",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.0.1",
-    "gulp-cheerio": "^0.3.2",
-    "gulp-dom": "^0.1.0"
+    "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.11",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "dependencies": {
+    "lodash": "^3.9.3"
   }
 }

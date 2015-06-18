@@ -1,0 +1,40 @@
+
+@import 'gravitons';
+
+body {
+  font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 2rem;
+  color: white;
+  background-color: var(--slate);
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid color(white a(.25));
+}
+
+.bold { font-weight: bold }
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input[type=text] {
+  padding: .5rem .75rem;
+  background-color: color(white a(.25));
+  border: 1px solid color(white a(.5));
+  border-radius: 3px;
+}
+
+:root {
+  --slate: #134;
+}
+
