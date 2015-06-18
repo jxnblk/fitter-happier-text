@@ -32,6 +32,9 @@ class Demo extends React.Component {
         <FitterHappierText
           className='caps'
           text='React Fitter Happier Text' />
+        <FitterHappierText
+          className='caps'
+          text='React component for fully fluid headings' />
         <hr />
         <div className='mt3 mb1'>
           <label htmlFor='text'
@@ -40,9 +43,13 @@ class Demo extends React.Component {
           </label>
           <input id='text'
             type='text'
-            className='c12'
+            className='mr2 input input-light'
             value={this.state.text}
             onChange={this.handleChange} />
+          <button onClick={this.toggleCaps}
+            className='btn btn-dark'>
+            Toggle Caps
+          </button>
         </div>
         <FitterHappierText
           className={classNames.demo}

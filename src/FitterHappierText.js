@@ -1,6 +1,5 @@
 
 import React from 'react'
-//import { debounce as _debounce } from 'lodash'
 
 class FitterHappierText extends React.Component {
 

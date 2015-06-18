@@ -17,6 +17,7 @@
     "babel": "babel src --out-dir .",
     "babel-watch": "babel src --out-dir . -w",
     "webpack": "webpack --progress --colors",
+    "prod": "webpack -p --progress --colors",
     "webpack-dev": "webpack-dev-server --progress --colors",
     "dev": "npm run webpack-dev & npm run babel-watch",
     "start": "gulp compile"

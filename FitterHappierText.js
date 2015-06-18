@@ -20,8 +20,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-//import { debounce as _debounce } from 'lodash'
-
 var FitterHappierText = (function (_React$Component) {
   function FitterHappierText() {
     _classCallCheck(this, FitterHappierText);
