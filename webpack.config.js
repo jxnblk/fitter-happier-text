@@ -1,11 +1,11 @@
 
 module.exports = {
-  entry: './demo/entry.js',
+  entry: './react/entry.js',
 
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/demo',
-    publicPath: '/demo'
+    path: __dirname + '/react',
+    publicPath: '/react'
   },
 
   module: {
