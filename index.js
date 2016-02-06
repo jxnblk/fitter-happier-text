@@ -8,6 +8,7 @@ module.exports = function(elements, options) {
   var baseline = options.baseline || 16;
   var paddingY = options.paddingY || 0;
   var doc = options.doc || document;
+  var bounding = typeof doc.createElementNS('http://www.w3.org/2000/svg', 'svg').getBoundingClientRect === 'function';
 
   for (var i = 0; i < elements.length; i++) {
 
@@ -15,8 +16,7 @@ module.exports = function(elements, options) {
     var content = elements[i].textContent;
     var svg = doc.createElementNS('http://www.w3.org/2000/svg', 'svg');
     var text = doc.createElementNS('http://www.w3.org/2000/svg', 'text');
-    var width;
-    var height;
+    var rect;
 
     // assign proper styles and positioning to text elements
     text.textContent = content;
@@ -41,10 +41,11 @@ module.exports = function(elements, options) {
     svg.appendChild(text);
     elements[i].parentNode.replaceChild(svg, elements[i]);
 
-    width = text.offsetWidth || text.getComputedTextLength();
-    height = text.offsetHeight || 24;
+    rect = bounding ? text.getBoundingClientRect() : {};
+    rect.width = rect.width || text.offsetWidth || text.getComputedTextLength();
+    rect.height = rect.height || text.offsetHeight || 24;
 
-    svg.setAttribute('viewBox', '0 0 ' + width + ' ' + (height + paddingY));
+    svg.setAttribute('viewBox', '0 0 ' + Math.round(rect.width) + ' ' + (Math.round(rect.height) + paddingY));
 
   }
 
