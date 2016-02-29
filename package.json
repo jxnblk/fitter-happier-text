@@ -1,6 +1,6 @@
 {
   "name": "fitter-happier-text",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Fit text to the width of its container",
   "main": "index.js",
   "homepage": "http://jxnblk.github.com/fitter-happier-text",
