@@ -41,7 +41,7 @@ module.exports = function(elements, options) {
     svg.appendChild(text);
     elements[i].parentNode.replaceChild(svg, elements[i]);
 
-    rect = bounding ? text.getBoundingClientRect() : {};
+    rect = bounding ? Object.assign({}, text.getBoundingClientRect()) : {};
     rect.width = rect.width || text.offsetWidth || text.getComputedTextLength();
     rect.height = rect.height || text.offsetHeight || 24;
 
